@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 
@@ -16,6 +17,9 @@ use App\Http\Controllers\HomeController;
 
 //Asig genero el enlace del controlador y la ruta para tener la logica en el controlador
 Route::get('/', HomeController::class);
+
+//Route::resource('crearlocales','FileController');
+Route::resource('crearlocales',FileController::class);
 
 // Route::get('blog');
 
