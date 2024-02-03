@@ -16,6 +16,9 @@ class TbRestaurantes extends Migration
     {
         Schema::create('restaurantes',function(Blueprint $table){
             $table -> id();
+            // $table -> string('nombre_local');
+            // $table -> string('propietario',50);
+            // $table -> text('descripcion');
             $table -> string('url_imagen');
             //este metodo crea dos columnas una en que momento se crea el registro y otra en el cual se modifica ese registro
             $table ->timestamps();

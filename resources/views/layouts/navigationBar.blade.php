@@ -461,13 +461,14 @@
                     </div>
                 </div>
             </div>
+
         </nav>
     </header>
 
     <br>
 
     <div class="container">
-        <div class="row">
+        <div class="row" style="background-color: lightgray">
             <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
                 aria-describedby="search-addon" />
 
