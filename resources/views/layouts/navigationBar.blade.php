@@ -29,53 +29,8 @@
                     style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
             </div>
         </nav>
-
-        <main>
-
-        </main>
-
-        <footer>
-
-        </footer>
-
     </section>
-    <!--
-  max-w-4xl mx-auto mt-20 text-center
-max-w-xl mx-auto
--->
-    <header class="text-center max-w-4xl mx-auto mt-5">
-        <div class="max-w-xl mx-auto">
-            <div class="tw-flex tw-justify-center space-x-4 mt-8">
-                <span class="relative inline-flex items-center bg-gray-200 inline-block rounded-xl">
-                    <select class="appeareance-none bg-transparent py-2 pl-3 pr-9 text-sm font-semibold">
-                        <option value="Categoria" disabled selected>Categoria</option>
-                        <option value="Lujo">Lujo</option>
-                        <option value="5 estrellas">5 estrellas</option>
-                    </select>
-                </span>
-
-                <span class="relative inline-flex items-center bg-gray-200 inline-block rounded-xl px-3 py-2">
-                    <form method="get" action="#">
-                        <input type="text" name="search" placeholder="Encuentra tu local"
-                            class="bg-transparent placeholder-black font-semibold text-sm">
-                    </form>
-                </span>
-            </div>
-        </div>
-    </header>
-
-    <br>
     @yield('contenido')
-    <!--
-  <div class="container">
-        <div class="row" style="background-color: lightgray">
-            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
-                aria-describedby="search-addon" />
-
-        </div>
-    </div>
-    <br>
-    -->
 </body>
 
 </html>

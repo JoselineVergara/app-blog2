@@ -13,6 +13,6 @@ class HomeController extends Controller
     {
         $filesImagenes = files::all();
 
-        return view('Home',compact('filesImagenes')); 
+        return view('paginaPrincipal',compact('filesImagenes')); 
     }
 }

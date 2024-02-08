@@ -20,7 +20,7 @@ class FileController extends Controller
     public function index()
     {
         //
-        return view('CreateLocal');
+        return view('paginas.crearLocal');
     }
 
     /**
