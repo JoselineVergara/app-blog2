@@ -22,6 +22,8 @@ Route::view('/login',"login")->name('login');
 Route::view('/registro',"register")->name('registro');
 Route::view('/privada',"secret")->name('privada');
 
+Route::view('/pageExperience',"pageExperience")->name('experiencia');
+
 Route::post('/validar-registro',[administrarAutenticacion::class,'register'])->name('validar-Registro');
 Route::post('/inicia-sesion',[administrarAutenticacion::class,'login'])->name('inicia-sesion');
 Route::post('/logout',[administrarAutenticacion::class,'logout'])->name('logout');
