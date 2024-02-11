@@ -2,25 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Restaurantes;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use App\Models\files;
 
-class FileController extends Controller
+class RestaurantesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    // public function __invoke()
-    // {
-    //     return view('CreateLocal');
-    // }
     public function index()
     {
         //
-        return view('restaurantes.crearLocal');
     }
 
     /**
@@ -41,30 +35,16 @@ class FileController extends Controller
      */
     public function store(Request $request)
     {
-
-        $request->validate([
-            'file'=> 'required|image|max:2048'
-        ]);
-        $imagenes = $request->file('file')->store('public/img');
-
-        $url = Storage::url($imagenes);
-
-        // return $url;
-
-        files::create([
-            'url_imagen' => $url
-        ]);
-
-        // return redirect()->route();
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show($restaurante)
+    public function show(Restaurantes $restaurantes)
     {
         //
     }
@@ -72,10 +52,10 @@ class FileController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function edit($restaurante)
+    public function edit(Restaurantes $restaurantes)
     {
         //
     }
@@ -84,10 +64,10 @@ class FileController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $restaurante)
+    public function update(Request $request, Restaurantes $restaurantes)
     {
         //
     }
@@ -95,10 +75,10 @@ class FileController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function destroy($restaurante)
+    public function destroy(Restaurantes $restaurantes)
     {
         //
     }

@@ -1,0 +1,161 @@
+
+
+/*respuesta.html*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos para el contenedor principal */
+.contenedor {
+    text-align: center;
+}
+
+/* Estilos para el contenedor del título */
+.respuesta-contenedor {
+    margin-bottom: 20px;
+}
+
+.respuesta-contenedor h1 {
+    font-size: 36px;
+    color: #f1e8e8;
+}
+
+/* Estilos para el contenedor del mensaje */
+.agradecimiento-contenedor {
+    margin-bottom: 40px;
+}
+
+.agradecimiento-contenedor p {
+    font-size: 18px;
+    color: #fff5f5;
+}
+
+
+/*Pagina principal*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Estilos para el cuerpo*/
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-image: url(imagenrestaurante.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    flex-direction: column;
+    margin: 0;
+}
+
+/*Estilos para el header*/
+header {
+    background-color: rgb(22, 82, 146);
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    font-weight: bold;
+}
+
+h1 {
+    color: white;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    color: rgb(20, 20, 20);
+    text-decoration: none;
+}
+
+a:hover {
+    color: whitesmoke;
+}
+
+/*Estilos para el contenedor de login*/
+.login-contenedor {
+    text-align: center;
+
+
+}
+
+/*Estilos para el contenedor de título*/
+.titulo-contenedor {
+    color: white;
+    margin-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+/*Estilos para el formulario*/
+.contenedor-registro {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /*ajusta el ancho del formulario*/
+    max-width: 700px; /*ancho máximo del formulario*/
+    margin: 0 auto; /*centrar horizontalmente*/
+
+}
+
+.contenedor-registro form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-registro label {
+    margin-top: 10px;
+}
+
+.contenedor-registro input[type="text"],
+.contenedor-registro input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contenedor-registro button {
+    padding: 10px 20px;
+    background-color: rgb(22, 82, 146);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-registro button:hover {
+    background-color: rgb(17, 63, 110);
+}
