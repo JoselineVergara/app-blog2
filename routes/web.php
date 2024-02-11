@@ -25,3 +25,4 @@ Route::view('/privada',"secret")->name('privada');
 Route::post('/validar-registro',[administrarAutenticacion::class,'register'])->name('validar-Registro');
 Route::post('/inicia-sesion',[administrarAutenticacion::class,'login'])->name('inicia-sesion');
 Route::post('/logout',[administrarAutenticacion::class,'logout'])->name('logout');
+
