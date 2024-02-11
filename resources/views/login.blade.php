@@ -17,29 +17,30 @@
 <body>
     <div class="aliniamiento">
         <div class="border">
-            <form class="row g-3 container">
+            <form class="row g-3 container" method="POST" action="{{route('inicia-sesion')}}">
+                @csrf
                 <h1>Login</h1>
 
                 <div class="row-md-4">
                     <label for="input_Nome" id="label_Nome" class="form-label">Correo Electrónico</label>
-                    <input type="email" id="input_Nome" class="form-control" placeholder="Digite su correo aqui" aria-label="default input example" name="correo">                    
+                    <input type="email" id="input_Nome" class="form-control" placeholder="Digite su correo aqui" aria-label="default input example" name="email">
                 </div>
-                
+
                 <div class="row-md-4">
                     <label for="input_Senha" id="label_Senha" class="form-label">Contraseña</label>
-                    <input type="password" id="input_Senha" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="Digite su contraseña" name="contra">
+                    <input type="password" id="input_Senha" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="Digite su contraseña" name="password">
                     <div id="passwordHelpBlock" class="form-text"></div>
                     <p>Ha olvidado su contraseña? <a href="#">Click aqui</a></p>
                 </div>
-                
+
                 <div class="col-12">
                 <button class="btn btn-primary center_button" type="submit">Entrar</button>
-                <p class="page_login">Todavia no tiene cuenta? </br><a href="singup.html">Registrese aqui </a></p>
+                <p class="page_login">Todavia no tiene cuenta? </br><a href="{{route('registro')}}">Registrese aqui </a></p>
                 </div>
             </form>
         </div>
     </div>
-    
-    
+
+
 </body>
 </html>

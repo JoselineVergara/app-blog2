@@ -16,43 +16,44 @@
 <body>
     <div class="alinhamento">
         <div class="border">
-            <form class="row g-3 container">
+            <form class="row g-3 container" method="POST" action="{{route('validar-Registro')}}">
+                @csrf
                 <h1>Sign Up</h1>
 
                 <div class="row-md-4">
                 <label for="validationServer01" class="form-label"><b>Nombre de Usuario</b> </label>
-                <input type="text" class="form-control" id="validationServer01" placeholder="Digite su nombre aqui" required name="usuario">
+                <input type="text" class="form-control" id="validationServer01" placeholder="Digite su nombre aqui" required name="name">
                 </div>
 
                 <div class="row-md-4">
                     <label for="validationServer01" class="form-label"><b>Correo Electrónico</b> </label>
-                    <input type="email" class="form-control" id="validationServer01" placeholder="Digite su correo" required name="correo">
+                    <input type="email" class="form-control" id="validationServer01" placeholder="Digite su correo" required name="email">
                 </div>
-                
+
                 <div class="row-md-4">
                     <label for="inputPassword5" class="form-label"><b>Contraseña</b></label>
-                    <input type="password" id="inputPassword4" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="Digite su contraseña aqui" name="contra">
+                    <input type="password" id="inputPassword4" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="Digite su contraseña aqui" name="password">
                     <div id="passwordHelpBlock" class="form-text"> </div>
 
                 </div>
-                
-                <div class="row-md-4">
+
+                {{-- <div class="row-md-4">
                     <label for="inputPassword5" class="form-label"><b>Confirmar contraseña</b></label>
                     <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="Digite su contraseña nuevamente" >
                     <div id="passwordHelpBlock" class="form-text">
                         Your password must be 8-20 characters long, contain letters and numbers.
                     </div>
-                </div>
-                
+                </div> --}}
+
 
                 <div class="col-12">
                 <button class="btn btn-primary center_button" type="submit">Registrar</button>
-                <p class="page_login"><b>Ya posee una cuenta?</b> </br><a href="login.html">Entre aqui</a></p>
+                <p class="page_login"><b>Ya posee una cuenta?</b> </br><a href="{{route('login')}}">Entre aqui</a></p>
                 </div>
             </form>
         </div>
     </div>
-    
-    
+
+
 </body>
 </html>

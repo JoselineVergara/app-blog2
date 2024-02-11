@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\administrarAutenticacion;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/iniciarSesion', function() {
-    return view('usuario.iniciarSesion');
-});
+Route::view('/login',"login")->name('login');
+Route::view('/registro',"register")->name('registro');
+Route::view('/privada',"secret")->name('privada');
 
-Route::get('/registrarse', function() {
-    return view('usuario.registrarse');
-});
+Route::post('/validar-registro',[administrarAutenticacion::class,'register'])->name('validar-Registro');
+Route::post('/inicia-sesion',[administrarAutenticacion::class,'login'])->name('inicia-sesion');
+Route::post('/logout',[administrarAutenticacion::class,'logout'])->name('logout');
