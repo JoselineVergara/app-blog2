@@ -15,7 +15,8 @@ class RestaurantesController extends Controller
     public function index()
     {
         //pagina de inicio
-        $datos=Restaurantes::all();
+        // $datos=Restaurantes::all();
+        $datos=Restaurantes::paginate();
         return view('paginaPrincipal', compact('datos'));
         //return view('crearLocal');
     }
@@ -74,7 +75,11 @@ class RestaurantesController extends Controller
     public function edit($id)
     {
         //sirve para traer los datos que se van a editar y colocar en el formulario
-        return view('editarLocal');
+
+        $restaurante = Restaurantes::find($id);
+
+        return view('editarLocal',compact('restaurante'));
+        // echo $id;
     }
 
     /**
@@ -84,9 +89,20 @@ class RestaurantesController extends Controller
      * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Restaurantes $restaurantes)
+    public function update(Request $request, $id)
     {
         //este metodo actualiza los datos en la bd
+
+        $restaurante = Restaurantes::find($id);
+        $restaurante->nombre = $request->post('nombre');
+        $restaurante->ubicacion = $request->post('ubicacion');
+        $restaurante->descripcion = $request->post('descripcion');
+        $restaurante->horarioatencion = $request->post('horarioatencion');
+        $restaurante->categoria = $request->post('categoria');
+        $restaurante->save();
+
+        return redirect()->route('restaurantes.index')->with("success","Actualizado con exito");
+
     }
 
     /**

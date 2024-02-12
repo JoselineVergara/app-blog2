@@ -52,6 +52,7 @@
                             <option value="mexicana">Mexicana</option>
                             <option value="tailandesa">Tailandesa</option>
                             <option value="gourmet">Gourmet</option>
+                            <option value="desconocido">Desconocido</option>
                         </select>
                         <br>
                         <label for="imagen"><b>Imagen del local:</b></label>

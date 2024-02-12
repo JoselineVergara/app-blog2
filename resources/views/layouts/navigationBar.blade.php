@@ -16,7 +16,7 @@
     <section class="px-8 py-3" style="background-color:  #d8b38f">
         <nav class="flex justify-between items-center">
             <div>
-                <a href="">
+                <a href="{{route("restaurantes.index")}}">
                     <img src="" alt="Blog imagen" height="16" width="165">
                 </a>
             </div>

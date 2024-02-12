@@ -26,6 +26,7 @@ Route::get('/',[RestaurantesController::class,'index'])->name('restaurantes.inde
 Route::get('/crearlocales',[RestaurantesController::class,'create'])->name('restaurantes.create');
 Route::post('/guardarlocales',[RestaurantesController::class,'store'])->name('restaurantes.store');
 Route::get('/editarlocales/{id}',[RestaurantesController::class,'edit'])->name('restaurantes.edit');
+Route::put('/actualizarlocales/{id}',[RestaurantesController::class,'update'])->name('restaurantes.update');
 // Route::get('blog');
 
 //Cuando el ususario ingrese al archivo principal le muestre la vista welcome

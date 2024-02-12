@@ -34,13 +34,16 @@
                         <div
                             class="p-5 flex flex-col transition-colors duration-300 hover:bg-gray-200 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl py-3 px-3">
                             <div class="rounded-xl overflow-hidden">
-                                <img src="{{ asset($file->url_imagen) }}" alt="Imagen"
+                                <img src="{{ asset($file->img) }}" alt="Imagen"
                                     style="            width: 100%;
                                 height: 500px;
                                 object-fit: cover;
                                 object-position: bottom;
                                 max-width: 100%;">
                             </div>
+                            <form action="{{route("restaurantes.edit", $file->id)}}" method="GET">
+                                <button>editar</button>
+                            </form>
                             <h5 class="text-2xl md:text-3xl font-medium mt-3 text-center">{{ $file->nombre }}</h5>
                             <p class="text-slate-500 text-lg mt-3">{{ $file->descripcion }}</p>
                             <x-button rounded href="/" target="_blank" label="Visitanos" teal />
@@ -49,6 +52,9 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+            <div>
+
             </div>
         </div>
     </div>
