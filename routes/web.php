@@ -3,6 +3,7 @@
 use App\Http\Controllers\FileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RestaurantesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,14 +17,18 @@ use App\Http\Controllers\HomeController;
 */
 
 //Asig genero el enlace del controlador y la ruta para tener la logica en el controlador
-Route::get('/', HomeController::class);
+// Route::get('/', HomeController::class);
 
 //Route::resource('crearlocales','FileController');
-Route::resource('crearlocales',FileController::class);
+// Route::resource('crearlocales',FileController::class);
 
+Route::get('/',[RestaurantesController::class,'index'])->name('restaurantes.index');
+Route::get('/crearlocales',[RestaurantesController::class,'create'])->name('restaurantes.create');
+Route::post('/guardarlocales',[RestaurantesController::class,'store'])->name('restaurantes.store');
+Route::get('/editarlocales/{id}',[RestaurantesController::class,'edit'])->name('restaurantes.edit');
 // Route::get('blog');
 
-//Cuando el ususario ingrese al archivo principal le muestre la vista welcome 
+//Cuando el ususario ingrese al archivo principal le muestre la vista welcome
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -43,5 +48,5 @@ Route::resource('crearlocales',FileController::class);
 //     }else{
 //         return "Bienvenido al login: ".$nombre;
 //     }
-    
+
 // });

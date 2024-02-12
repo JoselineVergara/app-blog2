@@ -14,7 +14,10 @@ class RestaurantesController extends Controller
      */
     public function index()
     {
-        //
+        //pagina de inicio
+        $datos=Restaurantes::all();
+        return view('paginaPrincipal', compact('datos'));
+        //return view('crearLocal');
     }
 
     /**
@@ -24,7 +27,9 @@ class RestaurantesController extends Controller
      */
     public function create()
     {
-        //
+        //formulario donde nosotros agregamos datos
+
+        return view('crearLocal');
     }
 
     /**
@@ -35,7 +40,18 @@ class RestaurantesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //se usa para guardar los datos en la bd
+        $restaurantes = new Restaurantes();
+        $restaurantes->nombre = $request->post('nombre');
+        $restaurantes->ubicacion = $request->post('ubicacion');
+        $restaurantes->descripcion = $request->post('descripcion');
+        $restaurantes->horarioatencion = $request->post('horarioatencion');
+        $restaurantes->categoria = $request->post('categoria');
+        $restaurantes->img = $request->post('img');
+
+        $restaurantes->save();
+
+        return redirect()->route('restaurantes.index')->with("success","Agregado con exito");
     }
 
     /**
@@ -46,7 +62,7 @@ class RestaurantesController extends Controller
      */
     public function show(Restaurantes $restaurantes)
     {
-        //
+        //servira para obtener un registro de nuestra tabla
     }
 
     /**
@@ -55,9 +71,10 @@ class RestaurantesController extends Controller
      * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function edit(Restaurantes $restaurantes)
+    public function edit($id)
     {
-        //
+        //sirve para traer los datos que se van a editar y colocar en el formulario
+        return view('editarLocal');
     }
 
     /**
@@ -69,7 +86,7 @@ class RestaurantesController extends Controller
      */
     public function update(Request $request, Restaurantes $restaurantes)
     {
-        //
+        //este metodo actualiza los datos en la bd
     }
 
     /**
@@ -80,6 +97,6 @@ class RestaurantesController extends Controller
      */
     public function destroy(Restaurantes $restaurantes)
     {
-        //
+        //elimina el registro
     }
 }

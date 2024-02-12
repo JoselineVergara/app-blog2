@@ -29,7 +29,7 @@
             <!--Grid-->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!--Card -->
-                @foreach ($filesImagenes as $file)
+                @foreach ($datos as $file)
                     <div class="rounded-xl shadow-lg" style="background-color: white;">
                         <div
                             class="p-5 flex flex-col transition-colors duration-300 hover:bg-gray-200 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl py-3 px-3">
@@ -41,15 +41,11 @@
                                 object-position: bottom;
                                 max-width: 100%;">
                             </div>
-                            <h5 class="text-2xl md:text-3xl font-medium mt-3 text-center">Local de comida</h5>
-                            <p class="text-slate-500 text-lg mt-3">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-                                et
-                                perferendis
-                                eaque, exercitationem praesentium nihil.
-                            </p>
-                            <x-button rounded href="{{ route('crearlocales.index') }}" target="_blank" label="Visitanos"
-                                teal />
+                            <h5 class="text-2xl md:text-3xl font-medium mt-3 text-center">{{ $file->nombre }}</h5>
+                            <p class="text-slate-500 text-lg mt-3">{{ $file->descripcion }}</p>
+                            <x-button rounded href="/" target="_blank" label="Visitanos" teal />
+                            {{-- {{ route('crearlocales.index') }} --}}
+                            {{-- esto deberia enviar para crear tu experiencia sobre el local --}}
                         </div>
                     </div>
                 @endforeach

@@ -22,20 +22,26 @@
             <hr>
             <main>
                 <div class="contenedor-registro">
-                    <form action="respuesta.html" method="GET">
+                    <form action="{{ route('restaurantes.store') }}" method="POST">
+                        @csrf
                         <h2>Registro</h2>
                         <label for="nombre"><b>Nombre:</b></label>
-                        <input type="text" id="nombre" placeholder="Nombre del local" required><br>
+                        <input type="text" id="nombre" placeholder="Nombre del local" required name="nombre"><br>
 
                         <label for="ubicacion"><b>Ubicacion:</b></label>
-                        <input type="text" id="ubicacion" placeholder="Ej: Sur,Guayaquil" required><br>
+                        <input type="text" id="ubicacion" placeholder="Ej: Sur,Guayaquil" required name="ubicacion"><br>
+
+                        <label for="descripcion"><b>Descripcion:</b></label>
+                        <input type="text" id="ubicacion" placeholder="Ej: Hable sobre el local" required name="descripcion"><br>
+
 
                         <label for="horario"><b>Horario de atencion:</b></label>
-                        <input type="text" id="horario" placeholder="Ej: 7:00am-9:00pm" required><br>
+                        <input type="text" id="horario" placeholder="Ej: 7:00am-9:00pm" required
+                            name="horarioatencion"><br>
 
                         <!--Tipo de comida checkbox-->
                         <label for="comida"><b>Tipo de comida:</b></label>
-                        <select id="tipo-comida">
+                        <select id="tipo-comida" name="categoria">
                             <option value="" disabled>Escoja el tipo de cocina</option>
                             <option value="americana">Americana</option>
                             <option value="china">China</option>
@@ -49,22 +55,11 @@
                         </select>
                         <br>
                         <label for="imagen"><b>Imagen del local:</b></label>
-                        <form action="{{ route('crearlocales.store') }}" method="POST" enctype="multipart/form-data">
-                            @csrf
-
-                            <input type="file" name="file" id="" accept="image/*">
-
-                            @error('file')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
-
-                            <button type="submit" class="btn btn-primary"> Subir imagen </button>
-                        </form>
+                        <input type="file" name="img" id="">
+                        {{-- accept="image/*" --}}
+                        <button type="submit" class="btn btn-primary"> Subir imagen </button>
                     </form>
-
-
                 </div>
-
             </main>
         </div>
     </div>
