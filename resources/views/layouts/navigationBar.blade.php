@@ -17,7 +17,7 @@
         <nav class="flex justify-between items-center">
             <div>
                 <a href="{{route("restaurantes.index")}}">
-                    <img src="" alt="Blog imagen" height="16" width="165">
+                    <img src="logoTemporal.jpg" alt="Blog imagen" height="16" width="165">
                 </a>
             </div>
 

@@ -50,7 +50,7 @@
                             <option value="desconocido">Desconocido</option>
                         </select>
                         <br>
-                        <button type="submit" class="btn btn-primary"> Subir imagen </button>
+                        <button type="submit" class="btn btn-primary">Actualiza tu local</button>
                     </form>
                 </div>
             </main>

@@ -22,7 +22,7 @@
             <hr>
             <main>
                 <div class="contenedor-registro">
-                    <form action="{{ route('restaurantes.store') }}" method="POST">
+                    <form action="{{ route('restaurantes.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <h2>Registro</h2>
                         <label for="nombre"><b>Nombre:</b></label>
@@ -58,7 +58,7 @@
                         <label for="imagen"><b>Imagen del local:</b></label>
                         <input type="file" name="img" id="">
                         {{-- accept="image/*" --}}
-                        <button type="submit" class="btn btn-primary"> Subir imagen </button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
                     </form>
                 </div>
             </main>

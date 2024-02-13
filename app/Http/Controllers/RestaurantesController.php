@@ -16,7 +16,7 @@ class RestaurantesController extends Controller
     {
         //pagina de inicio
         // $datos=Restaurantes::all();
-        $datos=Restaurantes::paginate();
+        $datos=Restaurantes::orderBy('id','desc')->paginate(6);
         return view('paginaPrincipal', compact('datos'));
         //return view('crearLocal');
     }
@@ -43,12 +43,23 @@ class RestaurantesController extends Controller
     {
         //se usa para guardar los datos en la bd
         $restaurantes = new Restaurantes();
+
+
+
+        if($request->hasFile('img')){
+            $file= $request->file('img');
+            $destino = 'imagenes/';
+            $fileName = time() . '-' . $file->getClientOriginalName();
+            $upload = $request->file('img')->move($destino,$fileName);
+            $restaurantes->img = $destino.$fileName;
+        }
+
         $restaurantes->nombre = $request->post('nombre');
         $restaurantes->ubicacion = $request->post('ubicacion');
         $restaurantes->descripcion = $request->post('descripcion');
         $restaurantes->horarioatencion = $request->post('horarioatencion');
         $restaurantes->categoria = $request->post('categoria');
-        $restaurantes->img = $request->post('img');
+        // $restaurantes->img = $request->post('img');
 
         $restaurantes->save();
 
