@@ -1,0 +1,4 @@
+1.- agregar cambios
+2.- hacer un commit
+3.- describir los cambios
+4.- hacer un push

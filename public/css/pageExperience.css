@@ -1,0 +1,261 @@
+.heading{
+    text-align:center ;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 5rem;
+
+}
+
+.about .row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.about .row .image{
+    grid-column: 1; /* Position image in the first column */
+
+}
+
+.about .row .image img{
+    width: 90%;
+}
+
+.about .row .content{
+    grid-column: 2; /* Position content in the second column */
+    background-color: burlywood;
+
+}
+
+.about .row .content h1{
+    font-size: 3em;
+}
+
+.about .row .content h3{
+    font-size: 2em;
+}
+
+.about .row .content p{
+    font-size: 1em;
+}
+
+
+
+.testimonios-head.span{
+    font-family: 'Abril Fatface', serif;
+
+}
+
+#testimonios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
+
+.testimonios-head{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.testimonios-head h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.testimonios-head span{
+    font-size: 1.3rem;
+    color: black;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonio-box-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonio-box{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.profile-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews{
+    color: #f9d71c;
+}
+
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-comment p{
+    font-size: 0.9rem;
+}
+
+.btn-modal{
+    padding: 40px;
+    background-color: white;
+}
+
+.testimonios-head label{
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+/**.testimonios-head.area-comentar{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;}
+
+.testimonios-head.grid-comentar{
+    grid-column: 1;
+}*/
+
+.contenedor-comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contenedor-comentarios img {
+    width: 100%;
+}
+
+.area-comentar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    /**flex-wrap: wrap;
+    flex-direction: row;*/
+    margin-bottom: 1.5rem;
+    padding: 18px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+}
+
+.comentarios-usuarios {
+    width: calc(100% - 2.5rem);
+}
+
+.contenedor-comentarios a {
+    text-decoration: none;
+}
+
+.area-comentar textarea{
+    width: 50px;
+}
+
+.comentar-publicacion .avatar,
+.publicacion-realizada .usuario-publico .avatar,
+.contenedor-comentarios .comentario-principal-usuario .avatar,
+.area-comentar .avatar {
+    grid-column: 1;
+    width: 65px;
+    height: 65px;
+    background-color: #F4F4F4;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.comentarios-usuarios .nombre-usuario {
+    font-weight: bold;
+    margin-right: .5rem;
+    color: inherit;
+}
+/* botones comentar */
+.boton-subir-archivo {
+    position: relative;
+    display: inline-block;
+}
+
+.boton-subir-archivo input[type="file"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.boton-file,
+.boton-enviar {
+    display: inline-block;
+    border: 0;
+    background-color: #374D71;
+    padding: 7px 15px;
+    margin-right: .5rem;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color ease-in 200ms;
+}
+
+.boton-file:hover,
+.boton-enviar:hover {
+    background-color: #4C6FA7;
+}

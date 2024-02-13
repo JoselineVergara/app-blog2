@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\FileController;
+// use App\Http\Controllers\FileController;
+use App\Http\Controllers\administrarAutenticacion;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RestaurantesController;
@@ -15,7 +16,6 @@ use App\Http\Controllers\RestaurantesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 //Asig genero el enlace del controlador y la ruta para tener la logica en el controlador
 // Route::get('/', HomeController::class);
 
@@ -50,4 +50,18 @@ Route::put('/actualizarlocales/{id}',[RestaurantesController::class,'update'])->
 //         return "Bienvenido al login: ".$nombre;
 //     }
 
+// // });
+// =======
+// Route::get('/', function () {
+//     return view('welcome');
 // });
+
+Route::view('/login',"login")->name('login');
+Route::view('/registro',"register")->name('registro');
+Route::view('/privada',"secret")->name('privada');
+
+Route::view('/pageExperience',"pageExperience")->name('experiencia');
+
+Route::post('/validar-registro',[administrarAutenticacion::class,'register'])->name('validar-Registro');
+Route::post('/inicia-sesion',[administrarAutenticacion::class,'login'])->name('inicia-sesion');
+Route::post('/logout',[administrarAutenticacion::class,'logout'])->name('logout');
