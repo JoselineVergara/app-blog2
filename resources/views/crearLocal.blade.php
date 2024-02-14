@@ -13,8 +13,6 @@
             rel="stylesheet">
     </head>
     <div class="container">
-
-
         <div class="login-contenedor">
             <div class="titulo-contenedor">
                 <h2><b>Registra tu restaurante</b></h2>

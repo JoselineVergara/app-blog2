@@ -45,7 +45,8 @@
                                 <button>editar</button>
                             </form>
                             <h5 class="text-2xl md:text-3xl font-medium mt-3 text-center">{{ $file->nombre }}</h5>
-                            <p class="text-slate-500 text-lg mt-3">{{ $file->descripcion }}</p>
+                            <br>
+                            <p class="text-slate-500 text-lg mt-3 text-center">{{ $file->descripcion }}</p>
                             <x-button rounded href="/" target="_blank" label="Visitanos" teal />
                             {{-- {{ route('crearlocales.index') }} --}}
                             {{-- esto deberia enviar para crear tu experiencia sobre el local --}}

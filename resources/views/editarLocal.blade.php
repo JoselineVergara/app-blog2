@@ -1,8 +1,5 @@
 @extends('layouts.navigationBar')
-
 @section('contenido')
-    <html>
-
     <head>
         <link href="crearLocal.css" rel="stylesheet">
         <title>EditarLocal</title>
@@ -56,6 +53,4 @@
             </main>
         </div>
     </div>
-
-    </html>
 @stop

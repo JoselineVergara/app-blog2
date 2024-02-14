@@ -24,10 +24,12 @@
             <div>
                 {{-- {{route('restaurantes.index')}} --}}
                 <a href="{{route('restaurantes.create')}}" class="text-xs text-white font-bold uppercase">introduce tu local</a>
-                <x-button rounded label="Iniciar sesion" right-icon="login"
+                <a href="{{route('login')}}" class="text-xs text-white font-bold uppercase">Login</a>
+                <a href="{{route('registro')}}" class="text-xs text-white font-bold uppercase">Registrarse</a>
+                {{-- <x-button rounded label="Iniciar sesion" right-icon="login"
                     style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
                 <x-button rounded label="Registrarse"
-                    style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
+                    style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" /> --}}
             </div>
         </nav>
     </section>

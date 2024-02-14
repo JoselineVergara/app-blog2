@@ -22,7 +22,7 @@ class administrarAutenticacion extends Controller
         $user->save();
 
         Auth::login($user);
-        return redirect(route('/'));
+        return redirect(route('paginaPrincipal'));
 
     }
     public function login(Request $request){
@@ -36,7 +36,7 @@ class administrarAutenticacion extends Controller
 
         if(Auth::attempt($credenciales,$remember)){
             $request->session()->regenerate();
-            return redirect('/');
+            return redirect('paginaPrincipal');
         }else{
             return redirect('login');
         }

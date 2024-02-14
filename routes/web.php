@@ -16,51 +16,18 @@ use App\Http\Controllers\RestaurantesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Asig genero el enlace del controlador y la ruta para tener la logica en el controlador
-// Route::get('/', HomeController::class);
-
-//Route::resource('crearlocales','FileController');
-// Route::resource('crearlocales',FileController::class);
 
 Route::get('/',[RestaurantesController::class,'index'])->name('restaurantes.index');
 Route::get('/crearlocales',[RestaurantesController::class,'create'])->name('restaurantes.create');
 Route::post('/guardarlocales',[RestaurantesController::class,'store'])->name('restaurantes.store');
 Route::get('/editarlocales/{id}',[RestaurantesController::class,'edit'])->name('restaurantes.edit');
 Route::put('/actualizarlocales/{id}',[RestaurantesController::class,'update'])->name('restaurantes.update');
-// Route::get('blog');
 
-//Cuando el ususario ingrese al archivo principal le muestre la vista welcome
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('blog',function(){
-//     return "Bienvenido al login";
-// });
-// Route::get('blog/create',function(){
-//     return "Bienvenido al blog create: ";
-// });
-// Route::get('blog/{usuario}',function($nombre){
-//     return "Bienvenido al login: ".$nombre;
-// });
-//cuando tenemos muchas rutas y queremos hacer una solo podemos hacer que las variables sean opcionales con ? luego en la funcion inicializamos la variable como null
-// Route::get('blog/{usuario}/{contra?}',function($nombre,$contra = null){
-//     if($contra != null){
-//         return "Bienvenido al login: ".$nombre." con la contra: ".$contra;
-//     }else{
-//         return "Bienvenido al login: ".$nombre;
-//     }
-
-// // });
-// =======
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::view('/pageExperience',"pageExperience")->name('experiencia');
 
 Route::view('/login',"login")->name('login');
 Route::view('/registro',"register")->name('registro');
-Route::view('/privada',"secret")->name('privada');
-
-Route::view('/pageExperience',"pageExperience")->name('experiencia');
+// Route::view('/privada',"secret")->name('privada');
 
 Route::post('/validar-registro',[administrarAutenticacion::class,'register'])->name('validar-Registro');
 Route::post('/inicia-sesion',[administrarAutenticacion::class,'login'])->name('inicia-sesion');
