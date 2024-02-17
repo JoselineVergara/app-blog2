@@ -56,6 +56,10 @@ class RestaurantesController extends Controller
         $restaurantes->descripcion = $request->post('descripcion');
         $restaurantes->horarioatencion = $request->post('horarioatencion');
         $restaurantes->categoria = $request->post('categoria');
+
+        $restaurantes->sitioweb = $request->post('sitioweb');
+        $restaurantes->rangoprecios = $request->post('rangoprecios');
+        $restaurantes->telefono = $request->post('telefono');
         // $restaurantes->img = $request->post('img');
 
         $restaurantes->save();
@@ -106,6 +110,10 @@ class RestaurantesController extends Controller
         $restaurante->descripcion = $request->post('descripcion');
         $restaurante->horarioatencion = $request->post('horarioatencion');
         $restaurante->categoria = $request->post('categoria');
+
+        $restaurante->sitioweb = $request->post('sitioweb');
+        $restaurante->rangoprecios = $request->post('rangoprecios');
+        $restaurante->telefono = $request->post('telefono');
         $restaurante->save();
 
         return redirect()->route('restaurantes.index')->with("success","Actualizado con exito");

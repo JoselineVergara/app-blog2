@@ -48,21 +48,19 @@
             <div class="testimonios-head">
                 <span>Comentarios</span>
                 <h1>Los clientes dijeron:</h1>
-                <label for="btn-modal">
-                    Escribe tu experiencia aqui
-                </label>
                 <div class="area-comentar">
                     <div class="grid-comentar">
                         <div class="avatar">
                             <img src="/../usuarios.jpg" alt="img">
                         </div>
-                        <form  action="{{route('experiencia.store', $r->id)}}"  method="POST" >
+                        <br>
+                        <br>
+                        <form action="{{ route('experiencia.store', $r->id) }}" method="POST">
                             @csrf
-                            <input type="text" name="usuario">
+                            <input type="text" name="usuario" placeholder="Ingresa tu nombre aqui">
                             <br>
-                            <textarea name="comentario" class="area-comentario" >
-
-                            </textarea>
+                            <br>
+                            <textarea name="comentario" placeholder="Ingresa tu comentario" class="area-comentario"></textarea>
                             <!--dentro de este div se encuentras los botones para publicar el comentario y subir el archivo-->
                             <div class="botones-comentar">
                                 {{-- <div class="boton-subir-archivo">
@@ -86,12 +84,9 @@
                 </div>
             </div>
             <div class="testimonio-box-contenedor">
-                <div class="testimonio-box">
-                    @foreach ($c as $item)
+                @foreach ($c as $item)
+                    <div class="testimonio-box">
                         <div class="box-top">
-                            <div class="profile">
-                                <img src="#" alt="">
-                            </div>
                             <div class="name-user">
                                 <strong>{{ $item->usuario }}</strong>
                                 <span>{{ $item->id }}</span>
@@ -107,8 +102,9 @@
                         <div class="omentario-cliente">
                             <p>{{ $item->comentario }}</p>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                    <br>
+                @endforeach
             </div>
         </section>
 

@@ -187,20 +187,21 @@ align-content: center;
 }
 
 .area-comentar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+   /** grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     /**flex-wrap: wrap;
     flex-direction: row;*/
     margin-bottom: 1.5rem;
     padding: 18px;
-    background-color: #fff;
+    background-color: white;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
     border-radius: 12px;
 }
 
 .comentarios-usuarios {
-    width: calc(100% - 2.5rem);
+   /** width: calc(100% - 2.5rem);*/
+   width: 100px;
 }
 
 .contenedor-comentarios a {
@@ -208,7 +209,9 @@ align-content: center;
 }
 
 .area-comentar textarea{
-    width: 50px;
+    color: black;
+    width: 500px;
+    height: 200px;
 }
 
 .comentar-publicacion .avatar,

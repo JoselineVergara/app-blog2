@@ -40,6 +40,28 @@
                             <input type="text" id="descripcion" placeholder="Ej: Hable sobre el local" required
                                 name="descripcion" class="rounded-md border border-gray-300 px-3 py-2">
                         </div>
+
+
+
+
+                        <div class="flex flex-col">
+                            <label for="rangoprecios" class="font-bold">Rango de precios:</label>
+                            <input type="text" id="rangoprecios" placeholder="Ej: $$$,$$,$" required
+                                name="rangoprecios" class="rounded-md border border-gray-300 px-3 py-2">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="sitioweb" class="font-bold">Sitio web:</label>
+                            <input type="text" id="sitioweb" placeholder="Ej:www.local.com" required
+                                name="sitioweb" class="rounded-md border border-gray-300 px-3 py-2">
+                        </div>
+                        <div class="flex flex-col">
+                            <label for="telefono" class="font-bold">Telefono:</label>
+                            <input type="text" id="telefono" placeholder="Ej: 0999999999" required
+                                name="telefono" class="rounded-md border border-gray-300 px-3 py-2">
+                        </div>
+
+
+
                         <div class="flex flex-col">
                             <label for="horario" class="font-bold">Horario de atención:</label>
                             <input type="text" id="horario" placeholder="Ej: 7:00am-9:00pm" required
@@ -50,6 +72,15 @@
                             <select id="tipo-comida" name="categoria" class="rounded-md border border-gray-300 px-3 py-2">
                                 <option value="" disabled>Escoja el tipo de cocina</option>
                                 <option value="americana">Americana</option>
+                                <option value="china">China</option>
+                                <option value="francesa">Francesa</option>
+                                <option value="india">India</option>
+                                <option value="italia">Italia</option>
+                                <option value="japonesa">Japonesa</option>
+                                <option value="mexicana">Mexicana</option>
+                                <option value="tailandesa">Tailandesa</option>
+                                <option value="gourmet">Gourmet</option>
+                                <option value="desconocido">Desconocido</option>
                             </select>
                         </div>
                         <div class="flex flex-col">

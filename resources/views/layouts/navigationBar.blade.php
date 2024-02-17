@@ -19,10 +19,10 @@
 
             <div>
                 <a href="{{route('restaurantes.create')}}" class="text-xs text-white font-bold uppercase ">introduce tu local</a>
-                <x-button rounded label="Iniciar sesion" right-icon="login" href="{{route('login')}}"
+                {{-- <x-button rounded label="Iniciar sesion" right-icon="login" href="{{route('login')}}"
                     style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
                 <x-button rounded label="Registrarse" href="{{route('registro')}}"
-                    style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
+                    style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" /> --}}
             </div>
         </nav>
     </section>

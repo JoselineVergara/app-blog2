@@ -43,6 +43,30 @@
                                     name="descripcion" value="{{ $restaurante->descripcion }}"
                                     class="rounded-md border border-gray-300 px-3 py-2">
                             </div>
+
+
+
+
+
+                            <div class="flex flex-col">
+                                <label for="rangoprecios" class="font-bold">Rango de precios:</label>
+                                <input type="text" id="rangoprecios" placeholder="Ej: $$$,$$,$" required
+                                    name="rangoprecios" class="rounded-md border border-gray-300 px-3 py-2" value="{{ $restaurante->rangoprecios }}">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="sitioweb" class="font-bold">Sitio web:</label>
+                                <input type="text" id="sitioweb" placeholder="Ej:www.local.com" required name="sitioweb"
+                                    class="rounded-md border border-gray-300 px-3 py-2" value="{{ $restaurante->sitioweb }}">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="telefono" class="font-bold">Telefono:</label>
+                                <input type="text" id="telefono" placeholder="Ej: 0999999999" required name="telefono"
+                                    class="rounded-md border border-gray-300 px-3 py-2" value="{{ $restaurante->telefono }}">
+                            </div>
+
+
+
+
                             <div class="flex flex-col">
                                 <label for="horario" class="font-bold">Horario de atención:</label>
                                 <input type="text" id="horario" placeholder="Ej: 7:00am-9:00pm" required

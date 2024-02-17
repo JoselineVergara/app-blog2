@@ -3,7 +3,7 @@
 @section('tittle', 'Pagina blog')
 @section('contenido')
 
-    <header class="text-center max-w-4xl mx-auto mt-5">
+    {{-- <header class="text-center max-w-4xl mx-auto mt-5">
         <div class="max-w-xl mx-auto">
             <div class="tw-flex tw-justify-center space-x-4 mt-8">
                 <span class="relative inline-flex items-center bg-gray-200 rounded-xl">
@@ -22,7 +22,7 @@
                 </span>
             </div>
         </div>
-    </header>
+    </header> --}}
     <br>
     <div class="px-10 py-2">
         <div class="flex items-center justify-center  min-h-screen mx-auto">
