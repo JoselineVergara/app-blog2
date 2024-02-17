@@ -43,9 +43,6 @@ class RestaurantesController extends Controller
     {
         //se usa para guardar los datos en la bd
         $restaurantes = new Restaurantes();
-
-
-
         if($request->hasFile('img')){
             $file= $request->file('img');
             $destino = 'imagenes/';
@@ -88,7 +85,6 @@ class RestaurantesController extends Controller
         //sirve para traer los datos que se van a editar y colocar en el formulario
 
         $restaurante = Restaurantes::find($id);
-
         return view('editarLocal',compact('restaurante'));
         // echo $id;
     }

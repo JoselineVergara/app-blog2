@@ -41,13 +41,14 @@
                                 object-position: bottom;
                                 max-width: 100%;">
                             </div>
+                            <br>
                             <form action="{{route("restaurantes.edit", $file->id)}}" method="GET">
-                                <button>editar</button>
+                                <button class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded-full uppercase ">editar</button>
                             </form>
                             <h5 class="text-2xl md:text-3xl font-medium mt-3 text-center">{{ $file->nombre }}</h5>
                             <br>
                             <p class="text-slate-500 text-lg mt-3 text-center">{{ $file->descripcion }}</p>
-                            <x-button rounded href="/" target="_blank" label="Visitanos" teal />
+                            <x-button rounded href="{{route('experiencia')}}" target="_blank" label="Visitanos" teal />
                             {{-- {{ route('crearlocales.index') }} --}}
                             {{-- esto deberia enviar para crear tu experiencia sobre el local --}}
                         </div>

@@ -1,14 +1,14 @@
 @extends('layouts.navigationBar')
+<head>
+    <link href="crearLocal.css" rel="stylesheet">
+    <title>EditarLocal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Oswald:wght@600&family=Single+Day&display=swap"
+        rel="stylesheet">
+</head>
 @section('contenido')
-    <head>
-        <link href="crearLocal.css" rel="stylesheet">
-        <title>EditarLocal</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Oswald:wght@600&family=Single+Day&display=swap"
-            rel="stylesheet">
-    </head>
     <div class="container">
         <div class="login-contenedor">
             <div class="titulo-contenedor">

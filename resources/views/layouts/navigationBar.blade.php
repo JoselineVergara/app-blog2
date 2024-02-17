@@ -22,18 +22,16 @@
             </div>
 
             <div>
-                {{-- {{route('restaurantes.index')}} --}}
-                <a href="{{route('restaurantes.create')}}" class="text-xs text-white font-bold uppercase">introduce tu local</a>
-                <a href="{{route('login')}}" class="text-xs text-white font-bold uppercase">Login</a>
-                <a href="{{route('registro')}}" class="text-xs text-white font-bold uppercase">Registrarse</a>
-                {{-- <x-button rounded label="Iniciar sesion" right-icon="login"
+                <a href="{{route('restaurantes.create')}}" class="text-xs text-white font-bold uppercase ">introduce tu local</a>
+                {{-- <a href="{{route('login')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full uppercase ">Iniciar sesion</a>
+                <a href="{{route('registro')}}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 uppercase rounded-full">Registrarse</a> --}}
+                <x-button rounded label="Iniciar sesion" right-icon="login" href="{{route('login')}}"
                     style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
-                <x-button rounded label="Registrarse"
-                    style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" /> --}}
+                <x-button rounded label="Registrarse" href="{{route('registro')}}"
+                    style="background-color: rgba(165, 42, 42, 0.864); border-color:  rgba(165, 42, 42, 0.864); color: white" />
             </div>
         </nav>
     </section>
     @yield('contenido')
 </body>
-
 </html>

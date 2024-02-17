@@ -11,6 +11,9 @@
 </head>
 <body>
     <section class="about" id="about">
+        <div class="row">
+            <a href="{{route('restaurantes.index')}}" class="text-xs text-white font-bold uppercase ">regresar</a>
+        </div>
         <h1 class="heading"><span>Sobre el retaurante</span></h1>
         <div class="row">
             <div class="image" style="text-align: center;">
