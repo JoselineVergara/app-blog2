@@ -9,4 +9,9 @@ class Restaurantes extends Model
 {
     public $table = 'tablarestaurantes';
     use HasFactory;
+
+    public function comentarios(){
+        return $this->hasMany(Comentarios::class,'id');
+    }
 }
+

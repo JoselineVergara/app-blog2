@@ -163,7 +163,9 @@
     cursor: pointer;
     transition: all 300ms ease;
 }
-
+.area-comentario{
+align-content: center;
+}
 /**.testimonios-head.area-comentar{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

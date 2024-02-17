@@ -2,9 +2,11 @@
 
 // use App\Http\Controllers\FileController;
 use App\Http\Controllers\administrarAutenticacion;
+use App\Http\Controllers\comentariosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RestaurantesController;
+use App\Models\Comentarios;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,9 @@ Route::post('/guardarlocales',[RestaurantesController::class,'store'])->name('re
 Route::get('/editarlocales/{id}',[RestaurantesController::class,'edit'])->name('restaurantes.edit');
 Route::put('/actualizarlocales/{id}',[RestaurantesController::class,'update'])->name('restaurantes.update');
 
-Route::view('/pageExperience',"pageExperience")->name('experiencia');
+// Route::view('/pageExperience',"pageExperience")->name('experiencia');
+Route::get('/experiencia/{id}',[comentariosController::class,'index'])->name('experiencia.index');
+Route::post('/guardarcomentario/{id}',[comentariosController::class,'store'])->name('experiencia.store');
 
 Route::view('/login',"login")->name('login');
 Route::view('/registro',"register")->name('registro');

@@ -48,9 +48,7 @@
                             <h5 class="text-2xl md:text-3xl font-medium mt-3 text-center">{{ $file->nombre }}</h5>
                             <br>
                             <p class="text-slate-500 text-lg mt-3 text-center">{{ $file->descripcion }}</p>
-                            <x-button rounded href="{{route('experiencia')}}" target="_blank" label="Visitanos" teal />
-                            {{-- {{ route('crearlocales.index') }} --}}
-                            {{-- esto deberia enviar para crear tu experiencia sobre el local --}}
+                            <x-button rounded href="{{route('experiencia.index', $file->id)}}" label="Visitanos" teal />
                         </div>
                     </div>
                 @endforeach
