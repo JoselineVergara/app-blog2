@@ -25,6 +25,10 @@ Route::post('/guardarlocales',[RestaurantesController::class,'store'])->name('re
 Route::get('/editarlocales/{id}',[RestaurantesController::class,'edit'])->name('restaurantes.edit');
 Route::put('/actualizarlocales/{id}',[RestaurantesController::class,'update'])->name('restaurantes.update');
 
+Route::get('/eliminar/{id}', [RestaurantesController::class,'show'])->name('restaurantes.show');
+Route::delete('/destroy/{id}', [RestaurantesController::class,'destroy'])->name('restaurantes.destroy');
+
+
 // Route::view('/pageExperience',"pageExperience")->name('experiencia');
 Route::get('/experiencia/{id}',[comentariosController::class,'index'])->name('experiencia.index');
 Route::post('/guardarcomentario/{id}',[comentariosController::class,'store'])->name('experiencia.store');

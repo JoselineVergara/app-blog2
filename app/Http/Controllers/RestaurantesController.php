@@ -73,9 +73,11 @@ class RestaurantesController extends Controller
      * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function show(Restaurantes $restaurantes)
+    public function show($id)
     {
         //servira para obtener un registro de nuestra tabla
+        $restaurante = Restaurantes::find($id);
+        return view('eliminar',compact('restaurante'));
     }
 
     /**
@@ -120,14 +122,18 @@ class RestaurantesController extends Controller
 
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
      * @param  \App\Models\Restaurantes  $restaurantes
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Restaurantes $restaurantes)
+    public function destroy($id)
     {
         //elimina el registro
+        $restaurante = Restaurantes::find($id);
+        $restaurante->delete();
+        return redirect()->route('restaurantes.index')->with("success","Eliminado con exito");
     }
 }
